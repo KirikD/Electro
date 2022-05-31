@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_grey_willow
-  m_Shader: {fileID: 4800000, guid: a1c955eddea1e0f4e9c4673c479e80dc, type: 3}
+  m_Shader: {fileID: 4800000, guid: adce0b63bca75a84e9f786201b7d7b0b, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 09433f66e3e024d40aaa1c2e361bb7c5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -41,10 +41,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: fdffb75f2c5e9de41b37d64081b73049, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpSphere:
-        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -80,11 +76,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 99cd2e3ef79b9b44a8b50154b5b1ca64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fdffb75f2c5e9de41b37d64081b73049, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -130,11 +126,12 @@ Material:
     - _AlphaCutoffPrepass: 0.5
     - _AmbientOcclusionPower: 1
     - _Anisotropy: 0
-    - _BackFaceMirrorNormal: 0
     - _BlendMode: 0
     - _BumpScale: 1
     - _CoatMask: 0
-    - _ColorNoiseSpread: 15
+    - _ColorNoiseSpread: 2
+    - _CullFarDistance: 20
+    - _CullFarStart: 60
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
@@ -146,6 +143,7 @@ Material:
     - _DisplacementLockObjectScale: 1
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
+    - _DistanceBlend: 0
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 0
@@ -183,6 +181,7 @@ Material:
     - _HeightTessCenter: 0.5
     - _InitialBend: 1
     - _InvTilingScale: 1
+    - _InvertBackfaceNormal: 0
     - _Ior: 1
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
@@ -204,6 +203,7 @@ Material:
     - _SmoothnessPower: 1
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
+    - _Specular: 0.3
     - _SpecularPower: 0.2
     - _SrcBlend: 1
     - _StencilRef: 2
@@ -218,7 +218,6 @@ Material:
     - _TexWorldScaleEmissive: 1
     - _Thickness: 1
     - _ThicknessMultiplier: 1
-    - _TouchReactActive: 0
     - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentDepthPostpassEnable: 0
@@ -227,6 +226,8 @@ Material:
     - _UVBase: 0
     - _UVDetail: 0
     - _UVEmissive: 0
+    - _WindColorMix: 0
+    - _WindColorThreshold: 1
     - _WindNormalInfluence: 0.1
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestModeDistortion: 8
@@ -242,9 +243,13 @@ Material:
     - _HealthyColor: {r: 1, g: 1, b: 1, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _NewNormal: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _Tiling_and_Offset: {r: 1, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+    - _VertexNormalMultiply: {r: 0, g: 0, b: 0, a: 0}
+    - _WindColorInfluence: {r: 0, g: 0, b: 0, a: 0}

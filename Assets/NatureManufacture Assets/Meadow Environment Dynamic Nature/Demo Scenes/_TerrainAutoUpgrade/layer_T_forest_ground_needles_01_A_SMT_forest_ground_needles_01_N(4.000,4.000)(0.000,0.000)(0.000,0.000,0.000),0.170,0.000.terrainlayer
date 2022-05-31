@@ -9,12 +9,12 @@ TerrainLayer:
   m_Name: layer_T_forest_ground_needles_01_A_SMT_forest_ground_needles_01_N(4.000,4.000)(0.000,0.000)(0.000,0.000,0.000),0.170,0.000
   m_DiffuseTexture: {fileID: 2800000, guid: 211cf1761d6159142891c536074c08a1, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: 6dd57bb2cf9450e45ad405c82801c859, type: 3}
-  m_MaskMapTexture: {fileID: 2800000, guid: 121d6ad9ed3667048877a97f643e32af, type: 3}
+  m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 4, y: 4}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
-  m_Metallic: 0.1
-  m_Smoothness: 1
+  m_Metallic: 0.17
+  m_Smoothness: 0
   m_NormalScale: 1
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_DiffuseRemapMax: {x: 1, y: 1, z: 1, w: 1}

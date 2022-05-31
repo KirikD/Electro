@@ -8,13 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_tree_stumps_grass
-  m_Shader: {fileID: 4800000, guid: 640b54fae8b8970468a91c4bf1c7f474, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933fd8ce48b071942b46c0a55d773f93, type: 3}
   m_ShaderKeywords: _HEIGHTMAP1 _HEIGHT_BASED_BLEND _LAYER_MAPPING_TRIPLANAR1 _MASKMAP
     _MASKMAP0 _MASKMAP1 _NORMALMAP _NORMALMAP0 _NORMALMAP1 _NORMALMAP_TANGENT_SPACE
     _NORMALMAP_TANGENT_SPACE0 _NORMALMAP_TANGENT_SPACE1 _NORMALMAP_TANGENT_SPACE2
     _NORMALMAP_TANGENT_SPACE3 _USESNOW_ON
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -29,6 +29,18 @@ Material:
     m_TexEnvs:
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base2ColorMap:
+        m_Texture: {fileID: 2800000, guid: e003e969c645eb7469595bf8140f0988, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base2MaskMap:
+        m_Texture: {fileID: 2800000, guid: 50a9912b7f5f8c64cb1bc1f80aa49e17, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base2NormalMap:
+        m_Texture: {fileID: 2800000, guid: 5a2a364351bbb2245a45c344799805a7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
@@ -49,6 +61,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap3:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMaskMap:
+        m_Texture: {fileID: 2800000, guid: aafde22c22647d94a936f2fa29cc5640, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseNormalMap:
+        m_Texture: {fileID: 2800000, guid: c8752f8b472c8a243a589f8a0f96e1f5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -173,6 +193,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _LayerInfluenceMaskMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerMask:
+        m_Texture: {fileID: 2800000, guid: 1576c8a6891417b47a099506c67beaa2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LayerMaskMap:
@@ -346,8 +370,22 @@ Material:
     - _AlphaCutoffPrepass: 0.5
     - _AmbientOcclusionPower: 1
     - _Anisotropy: 0
+    - _Base2AORemapMax: 1
+    - _Base2AORemapMin: 0
+    - _Base2Metallic: 1
+    - _Base2NormalScale: 1
+    - _Base2SmoothnessRemapMax: 1
+    - _Base2SmoothnessRemapMin: 0
+    - _Base2UsePlanarUV: 1
+    - _BaseAORemapMax: 1
+    - _BaseAORemapMin: 0
+    - _BaseMetallic: 1
+    - _BaseNormalScale: 1
+    - _BaseSmoothnessRemapMax: 1
+    - _BaseSmoothnessRemapMin: 0
+    - _BaseUsePlanarUV: 0
     - _BlendMode: 0
-    - _BumpScale: 1
+    - _BumpScale: 0
     - _CoatMask: 0
     - _CullMode: 2
     - _CullModeForward: 2
@@ -421,17 +459,17 @@ Material:
     - _HeightMapParametrization1: 0
     - _HeightMapParametrization2: 0
     - _HeightMapParametrization3: 0
-    - _HeightMax: 1
+    - _HeightMax: 1.37
     - _HeightMax0: 1
     - _HeightMax1: 1
-    - _HeightMax2: 1
+    - _HeightMax2: 4.85
     - _HeightMax3: 1
-    - _HeightMin: -1
+    - _HeightMin: 0
     - _HeightMin0: -1
     - _HeightMin1: -1
-    - _HeightMin2: -1
+    - _HeightMin2: -1.62
     - _HeightMin3: -1
-    - _HeightOffset: 0
+    - _HeightOffset: 0.11
     - _HeightOffset0: 0
     - _HeightOffset1: 0
     - _HeightOffset2: 0
@@ -452,6 +490,7 @@ Material:
     - _HeightTessCenter2: 0.5
     - _HeightTessCenter3: 0.5
     - _HeightTransition: 1
+    - _Height_Transition: 0.111
     - _InheritBaseColor1: 0
     - _InheritBaseColor2: 0
     - _InheritBaseColor3: 0
@@ -467,6 +506,7 @@ Material:
     - _InvTilingScale1: 10
     - _InvTilingScale2: 1
     - _InvTilingScale3: 1
+    - _Invert_Layer_Mask: 0
     - _Ior: 1
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
@@ -596,17 +636,21 @@ Material:
     - _UseMainLayerInfluence: 0
     - _UseSnow: 1
     - _VertexColorMode: 0
+    - _WetSmoothness: 1
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 4
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
+    - _Base2Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Base2TilingOffset: {r: 4, g: 4, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor0: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor1: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor2: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor3: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseTilingOffset: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -633,3 +677,4 @@ Material:
     - _UVMappingMask3: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskBlendMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+    - _WetColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0}

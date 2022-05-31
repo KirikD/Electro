@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_maple_01_cross
-  m_Shader: {fileID: 4800000, guid: a69d5225f8bd70341b4b06cb7b58e430, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7bd9a74c0a3251f429b6131c73340f07, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _DISABLE_DBUFFER _DOUBLESIDED_ON
     _MASKMAP _MATERIAL_FEATURE_TRANSMISSION _NORMALMAP _NORMALMAP_TANGENT_SPACE _VERTEX_WIND
   m_LightmapFlags: 4
@@ -34,7 +34,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: ac475ca2b38de82468e64d316e08d1bd, type: 3}
+        m_Texture: {fileID: 2800000, guid: f141fae4501d4d143ad0e98248e2dfcc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 7d80d42167b70044ab54046666a26415, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2803f559bedefdf459a25a3fb832c902, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -78,7 +78,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f141fae4501d4d143ad0e98248e2dfcc, type: 3}
+        m_Texture: {fileID: 2800000, guid: eec2342f89a34164abda7734d9c6b01d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -90,7 +90,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 02c316396b3927340a84d0ffceec55b7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7d80d42167b70044ab54046666a26415, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -131,16 +131,17 @@ Material:
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AlbedoAffectEmissive: 0
-    - _AlphaCutoff: 0.648
+    - _AlphaCutOut: 0.626
+    - _AlphaCutoff: 0.66
     - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
     - _AmbientOcclusionPower: 1
     - _Anisotropy: 0
     - _BlendMode: 0
-    - _BumpScale: 0.4
+    - _BumpScale: 1.15
     - _CoatMask: 0
-    - _ColorNoiseSpread: 10
+    - _ColorNoiseSpread: 2
     - _CullMode: 0
     - _CullModeForward: 0
     - _Cutoff: 0.6
@@ -197,7 +198,7 @@ Material:
     - _Metallic: 0
     - _MetallicPower: 1
     - _NormalMapSpace: 0
-    - _NormalScale: 1
+    - _NormalScale: 0.4
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
@@ -210,8 +211,9 @@ Material:
     - _Smooothness: 0.1
     - _Smoothness: 0.564
     - _SmoothnessPower: 1
-    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMax: 0.2
     - _SmoothnessRemapMin: 0
+    - _Specular: 0.3
     - _SpecularPower: 0.352
     - _SrcBlend: 1
     - _StencilRef: 2
@@ -226,7 +228,6 @@ Material:
     - _TexWorldScaleEmissive: 1
     - _Thickness: 0
     - _ThicknessMultiplier: 1
-    - _TouchReactActive: 0
     - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentDepthPostpassEnable: 0
@@ -246,16 +247,18 @@ Material:
     - _Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
     - _ColorAdjustment: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _DryColor: {r: 0.89705884, g: 0.8805006, b: 0.8113106, a: 1}
+    - _DryColor: {r: 1, g: 0.9768439, b: 0.8726415, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _HealthyColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+    - _HealthyColor: {r: 1, g: 1, b: 1, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _NewNormal: {r: 1, g: 1, b: 1, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _TilingOffset: {r: 1, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+    - _VertexNormalMultiply: {r: 0, g: 0, b: 0, a: 0}

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_grey_willow_02_cross
-  m_Shader: {fileID: 4800000, guid: a69d5225f8bd70341b4b06cb7b58e430, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7bd9a74c0a3251f429b6131c73340f07, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _DISABLE_DBUFFER _DOUBLESIDED_ON
     _MASKMAP _MATERIAL_FEATURE_TRANSMISSION _NORMALMAP _NORMALMAP_TANGENT_SPACE _VERTEX_WIND
   m_LightmapFlags: 4
@@ -34,7 +34,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: ac475ca2b38de82468e64d316e08d1bd, type: 3}
+        m_Texture: {fileID: 2800000, guid: b2238a88dc29ee0429aeb9ea689be2cf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 6e6a7eea391a10d4f8a8e9e7b31e7767, type: 3}
+        m_Texture: {fileID: 2800000, guid: 39dd6aa234ed71d43b6569b474765c26, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -78,7 +78,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b2238a88dc29ee0429aeb9ea689be2cf, type: 3}
+        m_Texture: {fileID: 2800000, guid: d567eb0195f6a6445a1c96c54dbfdf8e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -90,7 +90,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 02c316396b3927340a84d0ffceec55b7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e6a7eea391a10d4f8a8e9e7b31e7767, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -138,9 +138,9 @@ Material:
     - _AmbientOcclusionPower: 1
     - _Anisotropy: 0
     - _BlendMode: 0
-    - _BumpScale: 1
+    - _BumpScale: 1.4
     - _CoatMask: 0
-    - _ColorNoiseSpread: 10
+    - _ColorNoiseSpread: 2
     - _CullMode: 0
     - _CullModeForward: 0
     - _Cutoff: 0.32
@@ -210,8 +210,9 @@ Material:
     - _Smooothness: 0.1
     - _Smoothness: 0.564
     - _SmoothnessPower: 1
-    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMax: 0.1
     - _SmoothnessRemapMin: 0
+    - _Specular: 0.3
     - _SpecularPower: 0.352
     - _SrcBlend: 1
     - _StencilRef: 2
@@ -226,7 +227,6 @@ Material:
     - _TexWorldScaleEmissive: 1
     - _Thickness: 0
     - _ThicknessMultiplier: 1
-    - _TouchReactActive: 0
     - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentDepthPostpassEnable: 0
@@ -244,18 +244,20 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
     - _Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
-    - _ColorAdjustment: {r: 1.2, g: 1.2, b: 1.2, a: 0}
+    - _ColorAdjustment: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _DryColor: {r: 0.89705884, g: 0.8805006, b: 0.8113106, a: 1}
+    - _DryColor: {r: 0.9158737, g: 0.9081136, b: 0.8897059, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _HealthyColor: {r: 0.9433962, g: 0.9319534, b: 0.90334636, a: 1}
+    - _HealthyColor: {r: 1, g: 1, b: 1, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _NewNormal: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _TilingOffset: {r: 1, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+    - _VertexNormalMultiply: {r: 0, g: 0, b: 0, a: 0}
