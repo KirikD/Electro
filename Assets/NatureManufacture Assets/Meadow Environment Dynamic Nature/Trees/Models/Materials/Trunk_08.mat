@@ -59,7 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d56f13a5e28175240b8a4d1b82da4ede, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -103,7 +103,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 292e74a2591f31e42abaa23d09f7033c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7c8f4d1f426c14e488aa073177803ca6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -588,7 +588,7 @@ Material:
     - _ShowLayer2: 0
     - _ShowLayer3: 0
     - _ShowMaterialReferences: 1
-    - _Smoothness: 1
+    - _Smoothness: 0.11
     - _Smoothness0: 0
     - _Smoothness1: 1
     - _Smoothness2: 1
@@ -732,7 +732,7 @@ Material:
     - _UVMappingMaskBlendMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &6790674410475549568
+--- !u!114 &2041100471724793840
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

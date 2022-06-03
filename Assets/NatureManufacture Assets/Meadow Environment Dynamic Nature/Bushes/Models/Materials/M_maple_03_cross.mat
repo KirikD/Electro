@@ -9,19 +9,20 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_maple_03_cross
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _ALPHATEST_ON _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
   - DistortionVectors
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
   - MOTIONVECTORS
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -38,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 142a64b6cb37c2e4c935cc651d251a3d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -50,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 261693ca71b47bc4aa255e317117d6aa, type: 3}
+        m_Texture: {fileID: 2800000, guid: b8f587490a0356a4db7e1ee8ad7d19f6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -98,7 +99,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3d9812fb568936e4e9b4fa84d26de1ae, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -179,7 +180,7 @@ Material:
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AlbedoAffectEmissive: 0
-    - _AlphaClip: 0
+    - _AlphaClip: 1
     - _AlphaCutOut: 0.626
     - _AlphaCutoff: 0.66
     - _AlphaCutoffEnable: 1
@@ -225,7 +226,7 @@ Material:
     - _DoubleSidedEnable: 1
     - _DoubleSidedNormalMode: 1
     - _Drag: 4
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EmissiveColorMode: 1
     - _EmissiveIntensity: 0
     - _EnableBlendModePreserveSpecularLighting: 1
@@ -272,7 +273,7 @@ Material:
     - _ShiverDirectionality: 0.705
     - _ShiverDrag: 0.01
     - _Smooothness: 0.1
-    - _Smoothness: 0.564
+    - _Smoothness: 0.08
     - _SmoothnessPower: 1
     - _SmoothnessRemapMax: 0.2
     - _SmoothnessRemapMin: 0
@@ -280,7 +281,7 @@ Material:
     - _Specular: 0.3
     - _SpecularHighlights: 1
     - _SpecularPower: 0.352
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _StencilRef: 2
     - _StencilRefMV: 128
     - _StencilWriteMask: 7
@@ -288,7 +289,7 @@ Material:
     - _Stiffness: 1
     - _SubsurfaceMask: 1
     - _SupportDBuffer: 0
-    - _Surface: 0
+    - _Surface: 1
     - _SurfaceType: 0
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -307,7 +308,7 @@ Material:
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 3
     - _ZTestModeDistortion: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - __dirty: 0
     m_Colors:
     - _BaseColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
@@ -331,7 +332,7 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _VertexNormalMultiply: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &4375811147065434458
+--- !u!114 &926628871229445701
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 013f30145b6c1694685c70ac9380825a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMaskMap:
@@ -206,7 +206,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 013f30145b6c1694685c70ac9380825a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -583,7 +583,7 @@ Material:
     - _NormalScale2: 1
     - _NormalScale3: 1
     - _ObjectScaleAffectTile: 0
-    - _OcclusionStrength: 1
+    - _OcclusionStrength: 0.03
     - _OpacityAsDensity0: 0
     - _OpacityAsDensity1: 0
     - _OpacityAsDensity2: 0
@@ -608,7 +608,7 @@ Material:
     - _ShowLayer2: 0
     - _ShowLayer3: 0
     - _ShowMaterialReferences: 1
-    - _Smoothness: 1
+    - _Smoothness: 0.08
     - _Smoothness0: 0.5
     - _Smoothness1: 0.5
     - _Smoothness2: 1
@@ -753,7 +753,7 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _WetColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &3461798533102655421
+--- !u!114 &141689975200822927
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
