@@ -22,19 +22,20 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_flower_common_chicory_01
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _NORMALMAP
+  m_ShaderKeywords: _ALPHATEST_ON _METALLICSPECGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
   - DistortionVectors
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
   - MOTIONVECTORS
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -51,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 084bbb6915dad0b4180f57929bad9a2e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -119,7 +120,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1d746e1494d29374a955e1153521bb24, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -187,7 +188,7 @@ Material:
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AlbedoAffectEmissive: 0
-    - _AlphaClip: 0
+    - _AlphaClip: 1
     - _AlphaCutoff: 0.215
     - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
@@ -237,7 +238,7 @@ Material:
     - _DoubleSidedEnable: 1
     - _DoubleSidedNormalMode: 1
     - _Drag: 4
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EmissiveColorMode: 1
     - _EmissiveIntensity: 0
     - _EnableBlendModePreserveSpecularLighting: 1
@@ -296,7 +297,7 @@ Material:
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _StencilRef: 2
     - _StencilRefMV: 128
     - _StencilWriteMask: 7
@@ -304,7 +305,7 @@ Material:
     - _Stiffness: 0.64
     - _SubsurfaceMask: 1
     - _SupportDBuffer: 1
-    - _Surface: 0
+    - _Surface: 1
     - _SurfaceType: 0
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -326,7 +327,7 @@ Material:
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 3
     - _ZTestModeDistortion: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - __dirty: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
