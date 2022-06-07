@@ -2527,6 +2527,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: hose1
       objectReference: {fileID: 0}
+    - target: {fileID: 1110343442175553234, guid: 0cbcd71225f53c249822e932d254213c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 7211448773848044386, guid: c7aef4dd412d77d49bf12793a1eb85a1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cbcd71225f53c249822e932d254213c, type: 3}
 --- !u!1 &142558758
