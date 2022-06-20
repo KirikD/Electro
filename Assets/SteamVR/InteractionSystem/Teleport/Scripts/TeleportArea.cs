@@ -46,6 +46,7 @@ namespace Valve.VR.InteractionSystem
 			visibleTintColor = Teleport.instance.areaVisibleMaterial.GetColor( tintColorId );
 			highlightedTintColor = Teleport.instance.areaHighlightedMaterial.GetColor( tintColorId );
 			lockedTintColor = Teleport.instance.areaLockedMaterial.GetColor( tintColorId );
+
 		}
 
 
@@ -96,11 +97,11 @@ namespace Valve.VR.InteractionSystem
 		{
 			if ( locked )
 			{
-			//	areaMesh.material = Teleport.instance.areaLockedMaterial;
+				areaMesh.material = Teleport.instance.areaLockedMaterial;
 			}
 			else
 			{
-			//	areaMesh.material = Teleport.instance.areaVisibleMaterial;
+				areaMesh.material = Teleport.instance.areaVisibleMaterial;
 			}
 		}
 
@@ -179,7 +180,7 @@ namespace Valve.VR.InteractionSystem
 				TeleportArea teleportArea = Selection.activeTransform.GetComponent<TeleportArea>();
 				if ( teleportArea != null )
 				{
-					//teleportArea.UpdateVisualsInEditor();
+					teleportArea.UpdateVisualsInEditor();
 				}
 			}
 		}
@@ -195,7 +196,7 @@ namespace Valve.VR.InteractionSystem
 				TeleportArea teleportArea = Selection.activeTransform.GetComponent<TeleportArea>();
 				if ( GUI.changed && teleportArea != null )
 				{
-					//teleportArea.UpdateVisualsInEditor();
+					teleportArea.UpdateVisualsInEditor();
 				}
 			}
 		}
