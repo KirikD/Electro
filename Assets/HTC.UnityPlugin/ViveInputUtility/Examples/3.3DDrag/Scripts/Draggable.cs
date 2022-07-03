@@ -6,6 +6,8 @@ using HTC.UnityPlugin.Utility;
 using HTC.UnityPlugin.Vive;
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -98,6 +100,7 @@ public class Draggable : GrabbableBase<PointerEventData, Draggable.Grabber>
     private float m_minStretchScale = 1f;
     [SerializeField]
     private float m_maxStretchScale = 1f;
+
     [FormerlySerializedAs("afterGrabbed")]
     [SerializeField]
     private UnityEventDraggable m_afterGrabbed = new UnityEventDraggable();
@@ -123,7 +126,8 @@ public class Draggable : GrabbableBase<PointerEventData, Draggable.Grabber>
     public override float minScaleOnStretch { get { return m_minStretchScale; } set { m_minStretchScale = value; } }
 
     public override float maxScaleOnStretch { get { return m_maxStretchScale; } set { m_maxStretchScale = value; } }
-
+    public UnityEvent OnPointerEnter;
+    public UnityEvent OnPointerExit;
     public UnityEventDraggable afterGrabbed { get { return m_afterGrabbed; } }
 
     public UnityEventDraggable beforeRelease { get { return m_beforeRelease; } }
@@ -140,16 +144,30 @@ public class Draggable : GrabbableBase<PointerEventData, Draggable.Grabber>
     protected override void Awake()
     {
         base.Awake();
-
+   
         afterGrabberGrabbed += () => m_afterGrabbed.Invoke(this);
         beforeGrabberReleased += () => m_beforeRelease.Invoke(this);
         onGrabberDrop += () => m_onDrop.Invoke(this);
     }
 
     protected virtual void OnDisable() { ForceRelease(); }
-
+    float[] currWidth;
+    private void Start()
+    {
+        GetComponentsInChildren(true, s_rederers);
+        if (s_rederers.Count > 0)
+        {
+            currWidth = new float[s_rederers.Count];
+            for (int i = s_rederers.Count - 1; i >= 0; --i)
+            {
+                currWidth[i] = s_rederers[i].material.GetFloat("_ASEOutlineWidth");
+            }
+        }
+        SetMatNormal();
+    }
     protected override Grabber CreateGrabber(PointerEventData eventData)
     {
+        Debug.Log("C");
         var hitResult = eventData.pointerPressRaycast;
         float distance;
         switch (eventData.button)
@@ -173,12 +191,64 @@ public class Draggable : GrabbableBase<PointerEventData, Draggable.Grabber>
 
     protected override void DestoryGrabber(Grabber grabber)
     {
-        Grabber.Release(grabber);
+        Grabber.Release(grabber); Debug.Log("B");
     }
 
     public virtual void OnInitializePotentialDrag(PointerEventData eventData)
     {
+        Debug.Log("A");
         eventData.useDragThreshold = false;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Invoke(nameof(Deselect),1);
+        if (other.tag == "PointerLaser")
+        {
+            OnPointerEnter?.Invoke();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        CancelInvoke(nameof(Deselect));
+        if (other.tag == "PointerLaser")
+        {
+            OnPointerExit?.Invoke();
+        }
+    }
+    void Deselect() { OnPointerExit?.Invoke(); }
+    private readonly static List<Renderer> s_rederers = new List<Renderer>();
+
+    public void SetMatOver() { SetChildRendererCol(Color.yellow, Color.green, 1); }
+    public void SetMatDragged() { SetChildRendererCol(Color.cyan, Color.blue, 2); }
+    public void SetMatNormal() { SetChildRendererCol(Color.white, Color.black, -0.1f); }
+
+    private void SetChildRendererCol(Color targetCol, Color outlColor, float width)
+    {
+        GetComponentsInChildren(true, s_rederers);
+
+        if (s_rederers.Count > 0)
+        {
+            for (int i = s_rederers.Count - 1; i >= 0; --i)
+            { // s_rederers[i].sharedMaterial.color = targetCol;
+                List<Material> myMaterials = s_rederers[i].materials.ToList();
+                Material[] tmpMat = new Material[myMaterials.Count];
+                for (int ii = 0; ii < myMaterials.Count; ii++)
+                {
+
+                    tmpMat[ii] = myMaterials[ii];
+                    tmpMat[ii].SetColor("_Color", targetCol);
+                    tmpMat[ii].SetColor("_ASEOutlineColor", outlColor);
+                    tmpMat[ii].SetFloat("_ASEOutlineWidth", currWidth[i] * width);
+
+                }
+                s_rederers[i].GetComponent<Renderer>().materials = tmpMat;
+                //s_rederers[i].material.SetColor("_Color", targetCol);
+                //s_rederers[i].material.SetColor("_ASEOutlineColor", outlColor);
+                //s_rederers[i].material.SetFloat("_ASEOutlineWidth", currWidth[i] * width );
+            }
+
+            s_rederers.Clear();
+        }
     }
 
     public virtual void OnBeginDrag(PointerEventData eventData)
@@ -233,7 +303,7 @@ public class Draggable : GrabbableBase<PointerEventData, Draggable.Grabber>
                 RecordLatestPosesForDrop(Time.time, 0.05f);
                 OnGrabTransform();
             }
-
+            SetMatDragged();
             yield return null;
         }
     }

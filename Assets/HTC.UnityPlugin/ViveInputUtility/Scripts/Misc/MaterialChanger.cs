@@ -113,6 +113,7 @@ public class MaterialChanger : MonoBehaviour
 
         if (drags.Count > 0)
         {
+
             targetMat = dragged;
         }
         else if (presses.Count > 0)
